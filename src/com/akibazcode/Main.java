@@ -1,8 +1,12 @@
 package com.akibazcode;
 
+import com.akibazcode.car.Brand;
+import com.akibazcode.car.Car;
+import com.akibazcode.car.CarService;
 import com.akibazcode.user.User;
 import com.akibazcode.user.UserService;
 
+import java.math.BigDecimal;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,6 +16,10 @@ public class Main {
     private static final User baki;
     private static final User maki;
     private static final UserService userService;
+    private static final Car tesla;
+    private static final Car audi;
+    private static final Car mercedes;
+    private static final CarService carService;
 
     // Setup
     static {
@@ -22,6 +30,13 @@ public class Main {
         userService = new UserService();
         userService.validateAndAddUser(baki);
         userService.validateAndAddUser(maki);
+        tesla = new Car("1234", BigDecimal.valueOf(89), Brand.TESLA, true);
+        audi = new Car("5678", BigDecimal.valueOf(77), Brand.AUDI, false);
+        mercedes = new Car("9101", BigDecimal.valueOf(50), Brand.MERCEDES, false);
+        carService = new CarService();
+        carService.validateAndAddCar(tesla);
+        carService.validateAndAddCar(audi);
+        carService.validateAndAddCar(mercedes);
     }
 
     public static void main(String[] args) {
@@ -39,6 +54,8 @@ public class Main {
             getValidatedUserInput();
 
             switch (userInput) {
+                case 4 -> carService.getAvailableCars();
+                case 5 -> carService.getAvailableElectricCars();
                 case 6 -> userService.printAllUsers();
                 case 7 -> {
                     System.out.println("Bye.");

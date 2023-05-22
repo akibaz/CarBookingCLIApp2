@@ -1,7 +1,5 @@
 package com.akibazcode.user;
 
-import java.util.Arrays;
-
 public class UserService {
     private final UserDao userDao;
 
@@ -18,8 +16,9 @@ public class UserService {
     }
 
     public void printAllUsers() {
+        System.out.println("All users:");
         for (User user : userDao.getAllUsers()) {
-            System.out.println(user);
+            System.out.println("\t" + user);
         }
     }
 }
