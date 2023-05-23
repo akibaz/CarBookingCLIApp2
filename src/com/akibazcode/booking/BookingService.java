@@ -24,7 +24,7 @@ public class BookingService {
                 return;
             }
             userService.printAllUsers();
-            System.out.println("Select user id: ");
+            System.out.println("Select user id or enter 0 to return to main menu: ");
             String userId = scanner.nextLine();
             if (userId.equals("0")) {
                 return;
@@ -46,7 +46,7 @@ public class BookingService {
             String regNumber;
             while (true) {
                 carService.printAvailableCars();
-                System.out.println("Select car reg number: ");
+                System.out.println("Select car reg number or enter 0 to return to main menu: ");
                 regNumber = scanner.nextLine();
                 if (regNumber.equals("0")) {
                     return;
@@ -103,7 +103,7 @@ public class BookingService {
                 return;
             }
             userService.printAllUsers();
-            System.out.println("Select user id: ");
+            System.out.println("Select user id or enter 0 to return to main menu: ");
             String userId = scanner.nextLine();
             if (userId.equals("0")) {
                 return;
