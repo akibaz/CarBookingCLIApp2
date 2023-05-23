@@ -58,6 +58,7 @@ public class Main {
 
             switch (userInput) {
                 case 1 -> bookingService.validateAndAddBooking(carService, userService);
+                case 3 -> bookingService.printAllBookings();
                 case 4 -> carService.printAvailableCars();
                 case 5 -> carService.printAvailableElectricCars();
                 case 6 -> userService.printAllUsers();

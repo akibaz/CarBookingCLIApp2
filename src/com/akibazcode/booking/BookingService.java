@@ -1,8 +1,10 @@
 package com.akibazcode.booking;
 
+import com.akibazcode.car.Car;
 import com.akibazcode.car.CarService;
 import com.akibazcode.user.UserService;
 
+import java.awt.print.Book;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -59,6 +61,23 @@ public class BookingService {
                 carService.setCarAvilableToFalse(regNumber);
             }
             break;
+        }
+    }
+
+    public void printAllBookings() {
+        Booking[] bookings = bookingDAO.getBookings();
+        if (bookings[0] == null) {
+            System.out.println("There are no bookings.");
+            return;
+        }
+        System.out.println("All bookings:");
+        for (Booking booking : bookings) {
+            if (booking != null) {
+                System.out.println(booking);
+            } else {
+                break;
+            }
+
         }
     }
 }
