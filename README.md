@@ -4,7 +4,7 @@
 App for car rental company. This app allows administrators to see users, available cars and booked cars, and to make a booking.
 
 ## App structure
-App is written in java language, version 17. Structured in packages which contain POJOs with appropriate service and DAO classes.
+App is written in java language, version 17. Structured in packages which contain POJOs with appropriate service and DAO classes. Data is stored in arrays.
 
 
 ## App walktrough
