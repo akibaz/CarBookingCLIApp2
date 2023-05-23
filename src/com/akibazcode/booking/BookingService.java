@@ -1,10 +1,8 @@
 package com.akibazcode.booking;
 
-import com.akibazcode.car.Car;
 import com.akibazcode.car.CarService;
 import com.akibazcode.user.UserService;
 
-import java.awt.print.Book;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -78,6 +76,45 @@ public class BookingService {
                 break;
             }
 
+        }
+    }
+
+    public void printBookingsByUser(UserService userService) {
+        Booking[] bookings = bookingDAO.getBookings();
+        while (true) {
+            if (bookings[0] == null) {
+                System.out.println("There are no bookings.");
+                return;
+            }
+            userService.printAllUsers();
+            System.out.println("Select user id: ");
+            String userId = scanner.nextLine();
+            if (userId.equals("0")) {
+                return;
+            }
+            if (!userService.getUserIds().contains(userId)) {
+                System.out.println("There is no such user id." +
+                        " Please enter new one or enter 0 to exit to main menu.");
+                continue;
+            }
+
+            boolean userHasBooking = false;
+            String message = "User " + userService.getUserNameById(userId);
+            System.out.println(message);
+            for (Booking booking : bookings) {
+                if (booking == null) {
+                    break;
+                } else if (booking.getUserId().toString().equals(userId)) {
+                    userHasBooking = true;
+                    System.out.println(booking);
+                }
+            }
+            if (!userHasBooking) {
+                message = "User has no bookings";
+                System.out.print(message);
+                System.out.println();
+            }
+            break;
         }
     }
 }
