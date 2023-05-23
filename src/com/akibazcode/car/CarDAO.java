@@ -1,19 +1,15 @@
 package com.akibazcode.car;
 
 public class CarDAO {
-    private final Car[] cars;
-    private final int CAPACITY;
+    private static final Car[] cars;
+    private static final int CAPACITY;
     private static int availableIndex;
 
     static {
-        availableIndex = 0;
-    }
-
-    {
         CAPACITY = 3;
         cars = new Car[CAPACITY];
+        availableIndex = 0;
     }
-
 
     public void addCar(Car car) {
         if (CAPACITY > availableIndex) {
@@ -25,62 +21,9 @@ public class CarDAO {
     }
 
     public Car[] getAllCars() {
-        return cars;
+        Car[] allCars = new Car[availableIndex];
+        System.arraycopy(cars, 0, allCars, 0, availableIndex);
+        return allCars;
     }
 
-    public Car[] getAllElectricCars() {
-        int electricCarsCounter = 0;
-        for (Car car : cars) {
-            if (car == null) {
-                break;
-            }
-            if (car.isElectric()) {
-                electricCarsCounter++;
-            }
-        }
-        Car[] electricCars = new Car[electricCarsCounter];
-        System.arraycopy(cars, 0, electricCars, 0, electricCarsCounter);
-        return electricCars;
-    }
-
-    public Car[] getAvailableCars() {
-        int availableCount = 0;
-        for (Car car : cars) {
-            if (car == null) {
-                break;
-            }
-            if (car.isAvailable()) {
-                availableCount++;
-            }
-        }
-        Car[] availableCars = new Car[availableCount];
-        System.arraycopy(cars, 0, availableCars, 0, availableCount);
-        return availableCars;
-    }
-
-    public Car[] getAvailableElectricCars() {
-        int availableCount = 0;
-        for (Car car : cars) {
-            if (car == null) {
-                break;
-            }
-            if (car.isAvailable() && car.isElectric()) {
-                availableCount++;
-            }
-        }
-        Car[] availableCars = new Car[availableCount];
-        System.arraycopy(cars, 0, availableCars, 0, availableCount);
-        return availableCars;
-    }
-
-    public String getAllRegNumbers() {
-        StringBuilder result = new StringBuilder();
-        for (Car car : cars) {
-            if (car != null) {
-                result.append(car.getRegNumber()).append(" ");
-            }
-        }
-        result = new StringBuilder(result.toString().trim());
-        return result.toString();
-    }
 }

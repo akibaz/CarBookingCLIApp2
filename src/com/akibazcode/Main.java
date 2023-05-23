@@ -1,5 +1,6 @@
 package com.akibazcode;
 
+import com.akibazcode.booking.BookingService;
 import com.akibazcode.car.Brand;
 import com.akibazcode.car.Car;
 import com.akibazcode.car.CarService;
@@ -20,6 +21,7 @@ public class Main {
     private static final Car audi;
     private static final Car mercedes;
     private static final CarService carService;
+    private static final BookingService bookingService;
 
     // Setup
     static {
@@ -37,6 +39,7 @@ public class Main {
         carService.validateAndAddCar(tesla);
         carService.validateAndAddCar(audi);
         carService.validateAndAddCar(mercedes);
+        bookingService = new BookingService();
     }
 
     public static void main(String[] args) {
@@ -54,8 +57,9 @@ public class Main {
             getValidatedUserInput();
 
             switch (userInput) {
-                case 4 -> carService.getAvailableCars();
-                case 5 -> carService.getAvailableElectricCars();
+                case 1 -> bookingService.validateAndAddBooking(carService, userService);
+                case 4 -> carService.printAvailableCars();
+                case 5 -> carService.printAvailableElectricCars();
                 case 6 -> userService.printAllUsers();
                 case 7 -> {
                     System.out.println("Bye.");

@@ -1,16 +1,14 @@
 package com.akibazcode.user;
 
 public class UserDao {
-    private final User[] users;
-    private final int CAPACITY;
+    private static final User[] users;
+    private static final int CAPACITY;
     private static int availableIndex;
 
     static {
-        availableIndex = 0;
-    }
-    {
         CAPACITY = 2;
         users = new User[CAPACITY];
+        availableIndex = 0;
     }
 
     public void addUser(User user) {

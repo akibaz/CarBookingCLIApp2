@@ -9,13 +9,13 @@ public class CarServiceTest {
         Car audi = new Car("5678", BigDecimal.valueOf(77), Brand.AUDI, false);
         Car mercedes = new Car("9101", BigDecimal.valueOf(50), Brand.MERCEDES, false);
         carService.validateAndAddCar(tesla);
-        carService.getAvailableCars();
+        carService.printAvailableCars();
         carService.validateAndAddCar(tesla);
-        carService.getAvailableCars();
+        carService.printAvailableCars();
         carService.validateAndAddCar(audi);
         carService.validateAndAddCar(mercedes);
-        carService.getAvailableCars();
-        carService.getAvailableElectricCars();
+        carService.printAvailableCars();
+        carService.printAvailableElectricCars();
 
     }
 }

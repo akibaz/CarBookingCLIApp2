@@ -21,4 +21,23 @@ public class UserService {
             System.out.println("\t" + user);
         }
     }
+
+    public String getUserIds() {
+        StringBuilder userIds = new StringBuilder();
+        for (User user : userDao.getAllUsers()) {
+            userIds.append(user.getUserId()).append(" ");
+        }
+        return userIds.toString().trim();
+    }
+
+    public String getUserNameById(String userId) {
+        User[] users = userDao.getAllUsers();
+        String name = null;
+        for (User user : users) {
+            if (user.getUserId().toString().equals(userId)) {
+                name = user.getName();
+            }
+        }
+        return name;
+    }
 }

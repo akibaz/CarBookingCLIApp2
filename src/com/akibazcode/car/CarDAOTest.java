@@ -14,12 +14,7 @@ public class CarDAOTest {
         carDAO.addCar(audi);
         carDAO.addCar(mercedes);
         System.out.println(Arrays.toString(carDAO.getAllCars()));
-        System.out.println(Arrays.toString(carDAO.getAllElectricCars()));
-        System.out.println(Arrays.toString(carDAO.getAvailableCars()));
-        carDAO.getAllElectricCars()[0].setAvailable(false);
-        System.out.println(Arrays.toString(carDAO.getAvailableElectricCars()));
-
-        System.out.println(carDAO.getAllRegNumbers());
+        carDAO.getAllCars()[0].setAvailable(false);
 
         Car fiat = new Car("3333", BigDecimal.valueOf(33), Brand.AUDI, false);
         carDAO.addCar(fiat);

@@ -8,7 +8,15 @@ public class CarService {
     }
 
     public void validateAndAddCar(Car car) {
-        String regNumbers = carDAO.getAllRegNumbers();
+        StringBuilder regNumbersString = new StringBuilder();
+        for (Car c : carDAO.getAllCars()) {
+            if (c != null) {
+                regNumbersString.append(c.getRegNumber()).append(" ");
+            }
+        }
+        regNumbersString = new StringBuilder(regNumbersString.toString().trim());
+        String regNumbers = regNumbersString.toString().trim();
+
         if (car == null) {
             System.out.println("Cannot add car. Car cannot be null.");
         } else if (regNumbers.contains(car.getRegNumber())) {
@@ -18,25 +26,96 @@ public class CarService {
         }
     }
 
-    public void getAvailableCars() {
-        if (carDAO.getAvailableCars() == null) {
+    public void printAvailableCars() {
+        Car[] cars = carDAO.getAllCars();
+        if (cars == null) {
             System.out.println("There are no available cars.");
-        } else {
+            return;
+        }
+        boolean hasAvailableCar = false;
+        for (Car car : cars) {
+            if (car.isAvailable()) {
+                hasAvailableCar = true;
+                break;
+            }
+        }
+
+        if (hasAvailableCar) {
             System.out.println("Available cars:");
-            for (Car availableCar : carDAO.getAvailableCars()) {
-                System.out.println("\t" + availableCar);
+            for (Car car : cars) {
+                if (car.isAvailable()) {
+                    System.out.println("\t" + car);
+                }
+            }
+        } else {
+            System.out.println("There are no available cars.");
+        }
+    }
+
+    public void printAvailableElectricCars() {
+        Car[] cars = carDAO.getAllCars();
+        if (cars == null) {
+            System.out.println("There are no available electric cars.");
+            return;
+        }
+        boolean hasAvailableElectricCar = false;
+        for (Car car : cars) {
+            if (car.isElectric() && car.isAvailable()) {
+                hasAvailableElectricCar = true;
+                break;
+            }
+        }
+
+        if (hasAvailableElectricCar) {
+            System.out.println("Available electric cars:");
+            for (Car car : cars) {
+                if (car.isElectric() && car.isAvailable()) {
+                    System.out.println("\t" + car);
+                }
+            }
+        } else {
+            System.out.println("There are no available electric cars.");
+        }
+    }
+
+    public String getRegNumbers() {
+        Car[] cars = carDAO.getAllCars();
+        StringBuilder regNumbers = new StringBuilder();
+        for (Car car : cars) {
+            regNumbers.append(car.getRegNumber());
+        }
+        return regNumbers.toString().trim();
+    }
+
+    public String getCarByRegNumber(String regNumber) {
+        Car[] cars = carDAO.getAllCars();
+        String carResult = null;
+        for (Car car : cars) {
+            if (car.getRegNumber().equals(regNumber)) {
+                carResult = car.toString();
+                break;
+            }
+        }
+        return carResult;
+    }
+
+    public void setCarAvilableToFalse(String regNumber) {
+        Car[] cars = carDAO.getAllCars();
+        for (Car car : cars) {
+            if (car.getRegNumber().equals(regNumber)) {
+                car.setAvailable(false);
+                break;
             }
         }
     }
 
-    public void getAvailableElectricCars() {
-        if (carDAO.getAvailableElectricCars() == null) {
-            System.out.println("There are no available electric cars.");
-        } else {
-            System.out.println("Available electric cars:");
-            for (Car availableCar : carDAO.getAvailableElectricCars()) {
-                System.out.println("\t" + availableCar);
+    public boolean isThereAvailableCar() {
+        Car[] cars = carDAO.getAllCars();
+        for (Car car : cars) {
+            if (car.isAvailable()) {
+                return true;
             }
         }
+        return false;
     }
 }
