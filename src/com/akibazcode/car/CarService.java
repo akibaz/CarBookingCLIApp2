@@ -82,7 +82,7 @@ public class CarService {
         Car[] cars = carDAO.getAllCars();
         StringBuilder regNumbers = new StringBuilder();
         for (Car car : cars) {
-            regNumbers.append(car.getRegNumber());
+            regNumbers.append(car.getRegNumber()).append(" ");
         }
         return regNumbers.toString().trim();
     }

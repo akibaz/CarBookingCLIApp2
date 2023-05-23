@@ -3,6 +3,7 @@ package com.akibazcode.booking;
 import com.akibazcode.car.CarService;
 import com.akibazcode.user.UserService;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -28,9 +29,17 @@ public class BookingService {
             if (userId.equals("0")) {
                 return;
             }
-            if (!userService.getUserIds().contains(userId)) {
+            String[] userIds = userService.getUserIds().split(" ");
+            boolean doesUserInputMatchUserId = false;
+            for (String id : userIds) {
+                if (id.equals(userId)) {
+                    doesUserInputMatchUserId = true;
+                    break;
+                }
+            }
+            if (!doesUserInputMatchUserId) {
                 System.out.println("There is no such user id." +
-                                    " Please enter new one or enter 0 to exit to main menu.");
+                        " Please enter new one or enter 0 to exit to main menu.");
                 continue;
             }
 
@@ -42,10 +51,17 @@ public class BookingService {
                 if (regNumber.equals("0")) {
                     return;
                 }
-                if (!carService.getRegNumbers().contains(regNumber)) {
+                String[] regNums = carService.getRegNumbers().split(" ");
+                boolean doesUserInputMatchRegNums = false;
+                for (String regNum : regNums) {
+                    if (regNum.equals(regNumber)) {
+                        doesUserInputMatchRegNums = true;
+                        break;
+                    }
+                }
+                if (!doesUserInputMatchRegNums) {
                     System.out.println("There is no car reg number." +
                             " Please enter new one or enter 0 to exit to main menu.");
-                    continue;
                 } else {
                     break;
                 }
@@ -92,7 +108,15 @@ public class BookingService {
             if (userId.equals("0")) {
                 return;
             }
-            if (!userService.getUserIds().contains(userId)) {
+            String[] userIds = userService.getUserIds().split(" ");
+            boolean doesUserInputMatchUserId = false;
+            for (String id : userIds) {
+                if (id.equals(userId)) {
+                    doesUserInputMatchUserId = true;
+                    break;
+                }
+            }
+            if (!doesUserInputMatchUserId) {
                 System.out.println("There is no such user id." +
                         " Please enter new one or enter 0 to exit to main menu.");
                 continue;
