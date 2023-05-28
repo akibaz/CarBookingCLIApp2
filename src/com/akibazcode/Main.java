@@ -14,8 +14,6 @@ import java.util.Scanner;
 public class Main {
     private static final Scanner scanner;
     private static int userInput;
-    private static final User baki;
-    private static final User maki;
     private static final UserService userService;
     private static final Car tesla;
     private static final Car audi;
@@ -27,11 +25,7 @@ public class Main {
     static {
         scanner = new Scanner(System.in);
         userInput = 0;
-        baki = new User("Baki");
-        maki = new User("Maki");
         userService = new UserService();
-        userService.validateAndAddUser(baki);
-        userService.validateAndAddUser(maki);
         tesla = new Car("1234", BigDecimal.valueOf(89), Brand.TESLA, true);
         audi = new Car("5678", BigDecimal.valueOf(77), Brand.AUDI, false);
         mercedes = new Car("9101", BigDecimal.valueOf(50), Brand.MERCEDES, false);

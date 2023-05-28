@@ -7,12 +7,10 @@ public class User {
     private final UUID userId;
     private final String name;
 
-    {
-        userId = UUID.randomUUID();
-    }
 
-    public User(String name) {
+    public User(String name, UUID userId) {
         this.name = name;
+        this.userId = userId;
     }
 
     public String getName() {
