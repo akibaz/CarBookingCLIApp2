@@ -1,29 +1,29 @@
 package com.akibazcode.user;
 
 public class UserService {
-    private final UserDao userDao;
+    private final UserArrayDataAccessService userArrayDataAccessService;
 
     public UserService() {
-        userDao = new UserDao();
+        userArrayDataAccessService = new UserArrayDataAccessService();
     }
 
     public void printAllUsers() {
         System.out.println("All users:");
-        for (User user : userDao.getAllUsers()) {
+        for (User user : userArrayDataAccessService.getAllUsers()) {
             System.out.println("\t" + user);
         }
     }
 
     public String getUserIds() {
         StringBuilder userIds = new StringBuilder();
-        for (User user : userDao.getAllUsers()) {
+        for (User user : userArrayDataAccessService.getAllUsers()) {
             userIds.append(user.getUserId()).append(" ");
         }
         return userIds.toString().trim();
     }
 
     public String getUserNameById(String userId) {
-        User[] users = userDao.getAllUsers();
+        User[] users = userArrayDataAccessService.getAllUsers();
         String name = null;
         for (User user : users) {
             if (user.getUserId().toString().equals(userId)) {
