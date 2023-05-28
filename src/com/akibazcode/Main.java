@@ -1,13 +1,9 @@
 package com.akibazcode;
 
 import com.akibazcode.booking.BookingService;
-import com.akibazcode.car.Brand;
-import com.akibazcode.car.Car;
 import com.akibazcode.car.CarService;
-import com.akibazcode.user.User;
 import com.akibazcode.user.UserService;
 
-import java.math.BigDecimal;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,9 +11,6 @@ public class Main {
     private static final Scanner scanner;
     private static int userInput;
     private static final UserService userService;
-    private static final Car tesla;
-    private static final Car audi;
-    private static final Car mercedes;
     private static final CarService carService;
     private static final BookingService bookingService;
 
@@ -26,13 +19,7 @@ public class Main {
         scanner = new Scanner(System.in);
         userInput = 0;
         userService = new UserService();
-        tesla = new Car("1234", BigDecimal.valueOf(89), Brand.TESLA, true);
-        audi = new Car("5678", BigDecimal.valueOf(77), Brand.AUDI, false);
-        mercedes = new Car("9101", BigDecimal.valueOf(50), Brand.MERCEDES, false);
         carService = new CarService();
-        carService.validateAndAddCar(tesla);
-        carService.validateAndAddCar(audi);
-        carService.validateAndAddCar(mercedes);
         bookingService = new BookingService();
     }
 

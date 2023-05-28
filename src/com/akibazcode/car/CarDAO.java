@@ -1,29 +1,19 @@
 package com.akibazcode.car;
 
+import java.math.BigDecimal;
+
 public class CarDAO {
     private static final Car[] cars;
-    private static final int CAPACITY;
-    private static int availableIndex;
 
     static {
-        CAPACITY = 3;
-        cars = new Car[CAPACITY];
-        availableIndex = 0;
-    }
-
-    public void addCar(Car car) {
-        if (CAPACITY > availableIndex) {
-            cars[availableIndex++] = car;
-            System.out.println("Successfully added car " + car.getBrand() + ".");
-        } else {
-            System.out.println("Can not add car " + car.getBrand() + ". Not enough space in array.");
-        }
+        cars = new Car[]{
+                new Car("1234", BigDecimal.valueOf(89), Brand.TESLA, true),
+                new Car("5678", BigDecimal.valueOf(77), Brand.AUDI, false),
+                new Car("9101", BigDecimal.valueOf(50), Brand.MERCEDES, false)
+        };
     }
 
     public Car[] getAllCars() {
-        Car[] allCars = new Car[availableIndex];
-        System.arraycopy(cars, 0, allCars, 0, availableIndex);
-        return allCars;
+        return cars;
     }
-
 }

@@ -7,25 +7,6 @@ public class CarService {
         this.carDAO = new CarDAO();
     }
 
-    public void validateAndAddCar(Car car) {
-        StringBuilder regNumbersString = new StringBuilder();
-        for (Car c : carDAO.getAllCars()) {
-            if (c != null) {
-                regNumbersString.append(c.getRegNumber()).append(" ");
-            }
-        }
-        regNumbersString = new StringBuilder(regNumbersString.toString().trim());
-        String regNumbers = regNumbersString.toString().trim();
-
-        if (car == null) {
-            System.out.println("Cannot add car. Car cannot be null.");
-        } else if (regNumbers.contains(car.getRegNumber())) {
-            System.out.println("Cannot add car. Car reg number already taken.");
-        } else {
-            carDAO.addCar(car);
-        }
-    }
-
     public void printAvailableCars() {
         Car[] cars = carDAO.getAllCars();
         if (cars == null) {
