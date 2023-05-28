@@ -8,6 +8,10 @@ public class UserService {
     }
 
     public void printAllUsers() {
+        if (userArrayDataAccessService.getAllUsers() == null) {
+            System.out.println("There is a problem with file.");
+            return;
+        }
         System.out.println("All users:");
         for (User user : userArrayDataAccessService.getAllUsers()) {
             System.out.println("\t" + user);
