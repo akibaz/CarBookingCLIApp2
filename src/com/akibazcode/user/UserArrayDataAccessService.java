@@ -35,7 +35,7 @@ public class UserArrayDataAccessService implements UserDAO {
         for (int i = 0; i < usersDataArray.length; i++) {
             userDataArray = usersDataArray[i].split(",");
             uuid = userDataArray[0];
-            name = userDataArray[1];
+            name = userDataArray[1].strip();
             users[i] = new User(name, UUID.fromString(uuid));
         }
         return users;
