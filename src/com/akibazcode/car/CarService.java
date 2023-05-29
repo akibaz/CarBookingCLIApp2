@@ -3,8 +3,8 @@ package com.akibazcode.car;
 public class CarService {
     private final CarDAO carDAO;
 
-    public CarService() {
-        this.carDAO = new CarDAO();
+    public CarService(CarDAO carDAO) {
+        this.carDAO = carDAO;
     }
 
     public void printAvailableCars() {

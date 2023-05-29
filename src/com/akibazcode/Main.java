@@ -1,7 +1,10 @@
 package com.akibazcode;
 
+import com.akibazcode.booking.BookingDAO;
 import com.akibazcode.booking.BookingService;
+import com.akibazcode.car.CarDAO;
 import com.akibazcode.car.CarService;
+import com.akibazcode.user.UserArrayDataAccessService;
 import com.akibazcode.user.UserService;
 
 import java.util.InputMismatchException;
@@ -10,17 +13,23 @@ import java.util.Scanner;
 public class Main {
     private static final Scanner scanner;
     private static int userInput;
+    private static final UserArrayDataAccessService userArrayDataAccessService;
     private static final UserService userService;
+    private static final CarDAO carDAO;
     private static final CarService carService;
+    private static final BookingDAO bookingDAO;
     private static final BookingService bookingService;
 
     // Setup
     static {
         scanner = new Scanner(System.in);
         userInput = 0;
-        userService = new UserService();
-        carService = new CarService();
-        bookingService = new BookingService();
+        userArrayDataAccessService = new UserArrayDataAccessService();
+        userService = new UserService(userArrayDataAccessService);
+        carDAO = new CarDAO();
+        carService = new CarService(carDAO);
+        bookingDAO = new BookingDAO();
+        bookingService = new BookingService(bookingDAO, carService, userService);
     }
 
     public static void main(String[] args) {

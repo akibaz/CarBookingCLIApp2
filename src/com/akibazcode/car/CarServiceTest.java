@@ -2,7 +2,7 @@ package com.akibazcode.car;
 
 public class CarServiceTest {
     public static void main(String[] args) {
-        CarService carService = new CarService();
+        CarService carService = new CarService(new CarDAO());
         carService.printAvailableCars();
         carService.printAvailableElectricCars();
         System.out.println("carService.isThereAvailableCar() = " + carService.isThereAvailableCar());

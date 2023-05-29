@@ -8,17 +8,19 @@ import java.util.UUID;
 
 public class BookingService {
     private final BookingDAO bookingDAO;
-    private final Scanner scanner;
     private final CarService carService;
     private final UserService userService;
+    private final Scanner scanner;
 
-    public BookingService() {
-        this.bookingDAO = new BookingDAO();
-        this.scanner = new Scanner(System.in);
-        this.carService = new CarService();
-        this.userService = new UserService();
+    {
+        scanner = new Scanner(System.in);
     }
 
+    public BookingService(BookingDAO bookingDAO, CarService carService, UserService userService) {
+        this.bookingDAO = bookingDAO;
+        this.carService = carService;
+        this.userService = userService;
+    }
 
     public void validateAndAddBooking() {
         while (true) {

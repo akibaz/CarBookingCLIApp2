@@ -3,8 +3,8 @@ package com.akibazcode.user;
 public class UserService {
     private final UserArrayDataAccessService userArrayDataAccessService;
 
-    public UserService() {
-        userArrayDataAccessService = new UserArrayDataAccessService();
+    public UserService(UserArrayDataAccessService userArrayDataAccessService) {
+        this.userArrayDataAccessService = userArrayDataAccessService;
     }
 
     public void printAllUsers() {
