@@ -38,8 +38,8 @@ public class Main {
             getValidatedUserInput();
 
             switch (userInput) {
-                case 1 -> bookingService.validateAndAddBooking(carService, userService);
-                case 2 -> bookingService.printBookingsByUser(userService);
+                case 1 -> bookingService.validateAndAddBooking();
+                case 2 -> bookingService.printBookingsByUser();
                 case 3 -> bookingService.printAllBookings();
                 case 4 -> carService.printAvailableCars();
                 case 5 -> carService.printAvailableElectricCars();

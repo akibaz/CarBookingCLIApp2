@@ -3,21 +3,24 @@ package com.akibazcode.booking;
 import com.akibazcode.car.CarService;
 import com.akibazcode.user.UserService;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.UUID;
 
 public class BookingService {
     private final BookingDAO bookingDAO;
     private final Scanner scanner;
+    private final CarService carService;
+    private final UserService userService;
 
     public BookingService() {
         this.bookingDAO = new BookingDAO();
         this.scanner = new Scanner(System.in);
+        this.carService = new CarService();
+        this.userService = new UserService();
     }
 
 
-    public void validateAndAddBooking(CarService carService, UserService userService) {
+    public void validateAndAddBooking() {
         while (true) {
             if (!carService.isThereAvailableCar()) {
                 System.out.println("There are no available cars.");
@@ -95,7 +98,7 @@ public class BookingService {
         }
     }
 
-    public void printBookingsByUser(UserService userService) {
+    public void printBookingsByUser() {
         Booking[] bookings = bookingDAO.getBookings();
         while (true) {
             if (bookings[0] == null) {
