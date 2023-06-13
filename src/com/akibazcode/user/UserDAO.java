@@ -1,12 +1,13 @@
 package com.akibazcode.user;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
 public interface UserDAO {
     String PATH = "src/com/akibazcode/users.csv";
 
-    User[] getAllUsers();
+    List<User> getAllUsers();
 
-    User[] readAndParseUsersFromFile(String path) throws FileNotFoundException;
+    List<User> readAndParseUsersFromFile(String path) throws FileNotFoundException;
 
 }

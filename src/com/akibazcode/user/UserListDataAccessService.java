@@ -2,24 +2,28 @@ package com.akibazcode.user;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class UserArrayDataAccessService implements UserDAO {
+public class UserListDataAccessService implements UserDAO {
 
-    public User[] getAllUsers() {
-        User[] users;
+    @Override
+    public List<User> getAllUsers() {
+        List<User> usersList;
         try {
-            users = readAndParseUsersFromFile(PATH);
+            usersList = readAndParseUsersFromFile(PATH);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             return null;
         }
-        return users;
+        return usersList;
     }
 
     @Override
-    public User[] readAndParseUsersFromFile(String path) throws FileNotFoundException {
+    public List<User> readAndParseUsersFromFile(String path) throws FileNotFoundException {
+        List<User> usersList = new ArrayList<>();
         User[] users;
         File file = new File(path);
         Scanner scanner = new Scanner(file);
@@ -36,8 +40,8 @@ public class UserArrayDataAccessService implements UserDAO {
             userDataArray = usersDataArray[i].split(",");
             uuid = userDataArray[0];
             name = userDataArray[1].strip();
-            users[i] = new User(name, UUID.fromString(uuid));
+            usersList.add(new User(name, UUID.fromString(uuid)));
         }
-        return users;
+        return usersList;
     }
 }

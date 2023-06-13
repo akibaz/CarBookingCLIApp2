@@ -3,6 +3,7 @@ package com.akibazcode.booking;
 import com.akibazcode.car.CarService;
 import com.akibazcode.user.UserService;
 
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -77,33 +78,28 @@ public class BookingService {
                 System.out.println("Successfully booked " + carService.getCarByRegNumber(regNumber) +
                         " for user " + userService.getUserNameById(userId) + ".");
                 System.out.println("Booking reference number: " + newBooking.getBookingReference());
-                carService.setCarAvilableToFalse(regNumber);
+                carService.setCarAvailableToFalse(regNumber);
             }
             break;
         }
     }
 
     public void printAllBookings() {
-        Booking[] bookings = bookingDAO.getBookings();
-        if (bookings[0] == null) {
+        List<Booking> bookings = bookingDAO.getBookings();
+        if (bookings.size() == 0) {
             System.out.println("There are no bookings.");
             return;
         }
         System.out.println("All bookings:");
         for (Booking booking : bookings) {
-            if (booking != null) {
-                System.out.println(booking);
-            } else {
-                break;
-            }
-
+            System.out.println(booking);
         }
     }
 
     public void printBookingsByUser() {
-        Booking[] bookings = bookingDAO.getBookings();
+        List<Booking> bookings = bookingDAO.getBookings();
         while (true) {
-            if (bookings[0] == null) {
+            if (bookings.size() == 0) {
                 System.out.println("There are no bookings.");
                 return;
             }
@@ -131,9 +127,7 @@ public class BookingService {
             String message = "User " + userService.getUserNameById(userId);
             System.out.println(message);
             for (Booking booking : bookings) {
-                if (booking == null) {
-                    break;
-                } else if (booking.getUserId().toString().equals(userId)) {
+                if (booking.getUserId().toString().equals(userId)) {
                     userHasBooking = true;
                     System.out.println(booking);
                 }

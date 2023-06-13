@@ -8,6 +8,5 @@ public class BookingDAOTest {
         System.out.println("booking1 = " + booking1);
         BookingDAO bookingDAO = new BookingDAO();
         bookingDAO.addBooking(booking1);
-        bookingDAO.addBooking(booking1);
     }
 }

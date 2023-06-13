@@ -1,10 +1,12 @@
 package com.akibazcode.user;
 
-public class UserService {
-    private final UserArrayDataAccessService userArrayDataAccessService;
+import java.util.List;
 
-    public UserService(UserArrayDataAccessService userArrayDataAccessService) {
-        this.userArrayDataAccessService = userArrayDataAccessService;
+public class UserService {
+    private final UserListDataAccessService userArrayDataAccessService;
+
+    public UserService(UserListDataAccessService userListDataAccessService) {
+        this.userArrayDataAccessService = userListDataAccessService;
     }
 
     public void printAllUsers() {
@@ -27,7 +29,7 @@ public class UserService {
     }
 
     public String getUserNameById(String userId) {
-        User[] users = userArrayDataAccessService.getAllUsers();
+        List<User> users = userArrayDataAccessService.getAllUsers();
         String name = null;
         for (User user : users) {
             if (user.getUserId().toString().equals(userId)) {

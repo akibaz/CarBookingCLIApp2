@@ -1,5 +1,7 @@
 package com.akibazcode.car;
 
+import java.util.List;
+
 public class CarService {
     private final CarDAO carDAO;
 
@@ -8,8 +10,8 @@ public class CarService {
     }
 
     public void printAvailableCars() {
-        Car[] cars = carDAO.getAllCars();
-        if (cars == null) {
+        List<Car> cars = carDAO.getAllCars();
+        if (cars.size() == 0) {
             System.out.println("There are no available cars.");
             return;
         }
@@ -34,8 +36,8 @@ public class CarService {
     }
 
     public void printAvailableElectricCars() {
-        Car[] cars = carDAO.getAllCars();
-        if (cars == null) {
+        List<Car> cars = carDAO.getAllCars();
+        if (cars.size() == 0) {
             System.out.println("There are no available electric cars.");
             return;
         }
@@ -60,7 +62,7 @@ public class CarService {
     }
 
     public String getRegNumbers() {
-        Car[] cars = carDAO.getAllCars();
+        List<Car> cars = carDAO.getAllCars();
         StringBuilder regNumbers = new StringBuilder();
         for (Car car : cars) {
             regNumbers.append(car.getRegNumber()).append(" ");
@@ -69,7 +71,7 @@ public class CarService {
     }
 
     public String getCarByRegNumber(String regNumber) {
-        Car[] cars = carDAO.getAllCars();
+        List<Car> cars = carDAO.getAllCars();
         String carResult = null;
         for (Car car : cars) {
             if (car.getRegNumber().equals(regNumber)) {
@@ -80,8 +82,8 @@ public class CarService {
         return carResult;
     }
 
-    public void setCarAvilableToFalse(String regNumber) {
-        Car[] cars = carDAO.getAllCars();
+    public void setCarAvailableToFalse(String regNumber) {
+        List<Car> cars = carDAO.getAllCars();
         for (Car car : cars) {
             if (car.getRegNumber().equals(regNumber)) {
                 car.setAvailable(false);
@@ -91,7 +93,7 @@ public class CarService {
     }
 
     public boolean isThereAvailableCar() {
-        Car[] cars = carDAO.getAllCars();
+        List<Car> cars = carDAO.getAllCars();
         for (Car car : cars) {
             if (car.isAvailable()) {
                 return true;

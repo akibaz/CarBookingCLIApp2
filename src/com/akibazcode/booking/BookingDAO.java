@@ -1,27 +1,21 @@
 package com.akibazcode.booking;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookingDAO {
-    private static final Booking[] bookings;
-    private static final int CAPACITY;
-    private static int availableIndex;
+    private static final List<Booking> bookings;
 
     static {
-        CAPACITY = 5;
-        bookings = new Booking[CAPACITY];
-        availableIndex = 0;
+        bookings = new ArrayList<>();
     }
 
     public boolean addBooking(Booking booking) {
-        if (CAPACITY > availableIndex) {
-            bookings[availableIndex++] = booking;
-            return true;
-        } else {
-            System.out.println("Cannot add booking. There is no space in array.");
-        }
-        return false;
+        bookings.add(booking);
+        return true;
     }
 
-    public Booking[] getBookings() {
+    public List<Booking> getBookings() {
         return bookings;
     }
 }
