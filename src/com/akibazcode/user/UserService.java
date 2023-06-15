@@ -1,6 +1,7 @@
 package com.akibazcode.user;
 
 import java.util.List;
+import java.util.Optional;
 
 public class UserService {
     private final UserListDataAccessService userArrayDataAccessService;
@@ -30,12 +31,14 @@ public class UserService {
 
     public String getUserNameById(String userId) {
         List<User> users = userArrayDataAccessService.getAllUsers();
-        String name = null;
-        for (User user : users) {
-            if (user.getUserId().toString().equals(userId)) {
-                name = user.getName();
-            }
-        }
-        return name;
+//        String name = null;
+        Optional<User> user = users.stream().
+                filter(u -> u.getUserId().toString().equals(userId)).findFirst();
+//        for (User user : users) {
+//            if (user.getUserId().toString().equals(userId)) {
+//                name = user.getName();
+//            }
+//        }
+        return user.get().getName();
     }
 }

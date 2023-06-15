@@ -24,7 +24,6 @@ public class UserListDataAccessService implements UserDAO {
     @Override
     public List<User> readAndParseUsersFromFile(String path) throws FileNotFoundException {
         List<User> usersList = new ArrayList<>();
-        User[] users;
         File file = new File(path);
         Scanner scanner = new Scanner(file);
         StringBuilder usersDataString = new StringBuilder();
@@ -32,12 +31,11 @@ public class UserListDataAccessService implements UserDAO {
             usersDataString.append(scanner.nextLine()).append("#");
         }
         String[] usersDataArray = usersDataString.toString().split("#");
-        users = new User[usersDataArray.length];
         String uuid;
         String name;
         String[] userDataArray;
-        for (int i = 0; i < usersDataArray.length; i++) {
-            userDataArray = usersDataArray[i].split(",");
+        for (String s : usersDataArray) {
+            userDataArray = s.split(",");
             uuid = userDataArray[0];
             name = userDataArray[1].strip();
             usersList.add(new User(name, UUID.fromString(uuid)));

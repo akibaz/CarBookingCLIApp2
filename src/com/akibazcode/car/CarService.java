@@ -1,6 +1,7 @@
 package com.akibazcode.car;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CarService {
     private final CarDAO carDAO;
@@ -11,94 +12,46 @@ public class CarService {
 
     public void printAvailableCars() {
         List<Car> cars = carDAO.getAllCars();
-        if (cars.size() == 0) {
+        if (cars.stream().filter(Car::isAvailable).toList().size() == 0) {
             System.out.println("There are no available cars.");
             return;
         }
-        boolean hasAvailableCar = false;
-        for (Car car : cars) {
-            if (car.isAvailable()) {
-                hasAvailableCar = true;
-                break;
-            }
-        }
-
-        if (hasAvailableCar) {
-            System.out.println("Available cars:");
-            for (Car car : cars) {
-                if (car.isAvailable()) {
-                    System.out.println("\t" + car);
-                }
-            }
-        } else {
-            System.out.println("There are no available cars.");
-        }
+        System.out.println("Available cars:");
+        cars.stream().filter(Car::isAvailable).forEach(System.out::println);
     }
 
     public void printAvailableElectricCars() {
         List<Car> cars = carDAO.getAllCars();
-        if (cars.size() == 0) {
+        if (cars.stream().filter(Car::isAvailable).filter(Car::isElectric).toList().size() == 0) {
             System.out.println("There are no available electric cars.");
             return;
         }
-        boolean hasAvailableElectricCar = false;
-        for (Car car : cars) {
-            if (car.isElectric() && car.isAvailable()) {
-                hasAvailableElectricCar = true;
-                break;
-            }
-        }
-
-        if (hasAvailableElectricCar) {
-            System.out.println("Available electric cars:");
-            for (Car car : cars) {
-                if (car.isElectric() && car.isAvailable()) {
-                    System.out.println("\t" + car);
-                }
-            }
-        } else {
-            System.out.println("There are no available electric cars.");
-        }
+        System.out.println("Available electric cars:");
+        cars.stream().filter(Car::isAvailable).filter(Car::isElectric).forEach(System.out::println);
     }
 
     public String getRegNumbers() {
         List<Car> cars = carDAO.getAllCars();
         StringBuilder regNumbers = new StringBuilder();
-        for (Car car : cars) {
-            regNumbers.append(car.getRegNumber()).append(" ");
-        }
+        cars.forEach(car -> regNumbers.append(car.getRegNumber()).append(" "));
         return regNumbers.toString().trim();
     }
 
     public String getCarByRegNumber(String regNumber) {
         List<Car> cars = carDAO.getAllCars();
-        String carResult = null;
-        for (Car car : cars) {
-            if (car.getRegNumber().equals(regNumber)) {
-                carResult = car.toString();
-                break;
-            }
-        }
-        return carResult;
+        Optional<Car> resultCar = cars.stream().filter(car -> car.getRegNumber().equals(regNumber)).
+                findFirst();
+        return resultCar.get().toString();
     }
 
     public void setCarAvailableToFalse(String regNumber) {
         List<Car> cars = carDAO.getAllCars();
-        for (Car car : cars) {
-            if (car.getRegNumber().equals(regNumber)) {
-                car.setAvailable(false);
-                break;
-            }
-        }
+        cars.stream().filter(car -> car.getRegNumber().equals(regNumber))
+                .forEach(car -> car.setAvailable(false));
     }
 
     public boolean isThereAvailableCar() {
         List<Car> cars = carDAO.getAllCars();
-        for (Car car : cars) {
-            if (car.isAvailable()) {
-                return true;
-            }
-        }
-        return false;
+        return cars.stream().filter(Car::isAvailable).toList().size() != 0;
     }
 }
