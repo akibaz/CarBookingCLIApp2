@@ -2,10 +2,7 @@ package com.akibazcode.user;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.UUID;
+import java.util.*;
 
 public class UserListDataAccessService implements UserDAO {
 
@@ -13,7 +10,7 @@ public class UserListDataAccessService implements UserDAO {
     public List<User> getAllUsers() {
         List<User> usersList;
         try {
-            usersList = readAndParseUsersFromFile(PATH);
+            usersList = readAndParseUsersFromFile(Objects.requireNonNull(getClass().getClassLoader().getResource("users.csv")).getPath());
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             return null;

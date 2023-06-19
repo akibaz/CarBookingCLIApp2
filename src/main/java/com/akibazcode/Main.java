@@ -44,7 +44,9 @@ public class Main {
                     6 - View All Users
                     7 - Exit Application""");
 
-            getValidatedUserInput();
+            if (!getValidatedUserInput()) {
+                continue;
+            }
 
             switch (userInput) {
                 case 1 -> bookingService.validateAndAddBooking();
@@ -61,14 +63,16 @@ public class Main {
         }
     }
 
-    private static void getValidatedUserInput() {
+    private static boolean getValidatedUserInput() {
         try {
             userInput = scanner.nextInt();
+            return true;
         } catch (InputMismatchException e) {
             System.out.println("""
                     Invalid input ❌.
                     Please enter integer number.""");
             scanner.next();
+            return false;
         }
     }
 }

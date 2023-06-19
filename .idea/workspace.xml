@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="621dc49e-adf3-46cb-84b1-ba8c5c56fce2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/BookingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/BookingDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/BookingDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/BookingDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/bookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/bookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserListDataAccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserListDataAccessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserListDataAccessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserListDataAccessServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/users.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Q3Oma0TLkli8Fq33P5p1zExF9g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/home/branimir/Code/java/amicoscode-javaMasterClass-examples/java/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "two.files.diff.last.used.file": "/home/branimir/Code/java/amicoscode-javaMasterClass-examples/CarBookingCLIApp/src/com/akibazcode/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.akibazcode.user.UserService" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/akibazcode" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/com/akibazcode" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="BookingDAOTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akibazcode.booking.BookingDAOTest" />
+      <module name="CarBookingCLIApp2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akibazcode.booking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarDAOTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akibazcode.car.CarDAOTest" />
+      <module name="CarBookingCLIApp2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akibazcode.car.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akibazcode.car.CarServiceTest" />
+      <module name="CarBookingCLIApp2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akibazcode.car.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akibazcode.Main" />
+      <module name="CarBookingCLIApp2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akibazcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akibazcode.user.UserServiceTest" />
+      <module name="CarBookingCLIApp2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akibazcode.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CarBookingCLIApp2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CarBookingCLIApp2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BookingDAOTest" />
+        <item itemvalue="Application.CarServiceTest" />
+        <item itemvalue="Application.CarDAOTest" />
+        <item itemvalue="Application.UserServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="621dc49e-adf3-46cb-84b1-ba8c5c56fce2" name="Changes" comment="" />
+      <created>1684578957305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684578957305</updated>
+      <workItem from="1684578958630" duration="12951000" />
+      <workItem from="1684768287262" duration="1152000" />
+      <workItem from="1684769760561" duration="15181000" />
+      <workItem from="1684817177449" duration="18020000" />
+      <workItem from="1685029398564" duration="614000" />
+      <workItem from="1685308687105" duration="9839000" />
+      <workItem from="1685381372237" duration="5000" />
+      <workItem from="1685396807596" duration="2406000" />
+      <workItem from="1685400448567" duration="5000" />
+      <workItem from="1685442805948" duration="1049000" />
+      <workItem from="1685567153277" duration="402000" />
+      <workItem from="1686671683337" duration="4071000" />
+      <workItem from="1686691182195" duration="102000" />
+      <workItem from="1686868009931" duration="4581000" />
+      <workItem from="1686944591198" duration="28000" />
+      <workItem from="1686948873649" duration="13000" />
+      <workItem from="1686949963228" duration="20000" />
+      <workItem from="1687001038119" duration="321000" />
+      <workItem from="1687001362300" duration="58000" />
+      <workItem from="1687175433013" duration="613000" />
+      <workItem from="1687187161020" duration="1069000" />
+      <workItem from="1687188242945" duration="47000" />
+      <workItem from="1687188303392" duration="2619000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
