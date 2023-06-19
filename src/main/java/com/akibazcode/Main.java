@@ -4,7 +4,7 @@ import com.akibazcode.booking.BookingDAO;
 import com.akibazcode.booking.BookingService;
 import com.akibazcode.car.CarDAO;
 import com.akibazcode.car.CarService;
-import com.akibazcode.user.UserListDataAccessService;
+import com.akibazcode.user.UserFakerDataAccessService;
 import com.akibazcode.user.UserService;
 
 import java.util.InputMismatchException;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Main {
     private static final Scanner scanner;
     private static int userInput;
-    private static final UserListDataAccessService USER_LIST_DATA_ACCESS_SERVICE;
+    private static final UserFakerDataAccessService userFakerDataAccessService;
     private static final UserService userService;
     private static final CarDAO carDAO;
     private static final CarService carService;
@@ -24,8 +24,8 @@ public class Main {
     static {
         scanner = new Scanner(System.in);
         userInput = 0;
-        USER_LIST_DATA_ACCESS_SERVICE = new UserListDataAccessService();
-        userService = new UserService(USER_LIST_DATA_ACCESS_SERVICE);
+        userFakerDataAccessService = new UserFakerDataAccessService();
+        userService = new UserService(userFakerDataAccessService);
         carDAO = new CarDAO();
         carService = new CarService(carDAO);
         bookingDAO = new BookingDAO();

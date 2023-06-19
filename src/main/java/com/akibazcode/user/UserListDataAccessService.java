@@ -18,8 +18,8 @@ public class UserListDataAccessService implements UserDAO {
         return usersList;
     }
 
-    @Override
-    public List<User> readAndParseUsersFromFile(String path) throws FileNotFoundException {
+
+    private List<User> readAndParseUsersFromFile(String path) throws FileNotFoundException {
         List<User> usersList = new ArrayList<>();
         File file = new File(path);
         Scanner scanner = new Scanner(file);

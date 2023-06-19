@@ -5,29 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="621dc49e-adf3-46cb-84b1-ba8c5c56fce2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/BookingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/BookingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/BookingDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/BookingDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/booking/bookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/booking/bookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/Brand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/car/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/car/CarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserListDataAccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserListDataAccessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserListDataAccessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserListDataAccessServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/user/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/akibazcode/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/users.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserFakerDataAccessService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserFakerDataAccessServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akibazcode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserListDataAccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserListDataAccessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akibazcode/user/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/branimir/Code/java/amicoscode-javaMasterClass-examples/java/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "two.files.diff.last.used.file": "/home/branimir/Code/java/amicoscode-javaMasterClass-examples/CarBookingCLIApp/src/com/akibazcode/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/branimir/Code/java/amicoscode-javaMasterClass-examples/java/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/home/branimir/Code/java/amicoscode-javaMasterClass-examples/CarBookingCLIApp/src/com/akibazcode/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.akibazcode.user.UserService" />
@@ -142,8 +128,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.akibazcode.user.UserServiceTest" />
+    <configuration name="UserFakerDataAccessServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akibazcode.user.UserFakerDataAccessServiceTest" />
       <module name="CarBookingCLIApp2" />
       <extension name="coverage">
         <pattern>
@@ -155,26 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CarBookingCLIApp2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CarBookingCLIApp2" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.UserFakerDataAccessServiceTest" />
         <item itemvalue="Application.BookingDAOTest" />
         <item itemvalue="Application.CarServiceTest" />
         <item itemvalue="Application.CarDAOTest" />
-        <item itemvalue="Application.UserServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +181,8 @@
       <workItem from="1687175433013" duration="613000" />
       <workItem from="1687187161020" duration="1069000" />
       <workItem from="1687188242945" duration="47000" />
-      <workItem from="1687188303392" duration="2619000" />
+      <workItem from="1687188303392" duration="2930000" />
+      <workItem from="1687211817038" duration="1419000" />
     </task>
     <servers />
   </component>
