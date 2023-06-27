@@ -22,10 +22,6 @@ public class Booking {
         return userId;
     }
 
-    public String getCarRegNumber() {
-        return carRegNumber;
-    }
-
     @Override
     public String toString() {
         return "Booking{" +
